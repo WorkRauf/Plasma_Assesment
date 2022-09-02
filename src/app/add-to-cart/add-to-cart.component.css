@@ -1,0 +1,16 @@
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    flex:0 1 24%;
+    width: 500px;
+    height: 100%;
+}
+.fa-shopping-cart{
+    font-size: 24px;
+} 
+.add-to-btn{
+    border-style: none;
+}

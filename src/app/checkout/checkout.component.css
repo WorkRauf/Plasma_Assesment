@@ -1,0 +1,13 @@
+
+.checkout-card{
+    height: 5rem;
+}
+.fa-shopping-cart{
+    font-size: 24px;
+} 
+.add-to-btn{
+    border-style: none;
+}
+.card-img-top{
+    width: 150px;
+}

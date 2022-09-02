@@ -1,0 +1,26 @@
+<div class="container border mt-3 rounded">
+    <!-- heading -->
+    <div class="d-flex justify-content-between align-items-center text-center p-5 ">
+        <div>
+            <h2 class="text-dark">Our Products</h2>
+        </div>
+        <div>
+            <a class="add-to-btn" (click)="navigateTo()" > <i class="fas fa-shopping-cart "  ></i></a>
+        </div>
+    </div>
+    <!-- end-heading -->
+    <!-- cards -->
+    <div class="cards border bg-light p-3" >
+        <div class="card text-center ms-3 mt-4 rounded " *ngFor="let item of itemList; let i of itemList" >
+            <img class="card-img-top" src="{{item.imgUrl}}" alt="Card image cap">
+            <div class="card-body ">
+                <h5 class="card-title">{{item.title}}</h5>
+                <p> <b>Price:</b> {{item.price | currency: 'USD'}} </p>
+                <p>{{item.description}}</p>
+                <p>{{item.rating}}</p>
+                <a href="#" (click)="addToCart(i)" class="btn btn-dark">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="border center bg-light p-3" *ngIf="cardItem" >
+    <div class="d-flex flex-center ms-3 mt-4  rounded" *ngFor="let item of cardItem">
+        <!-- <img class="card-img-top" src="{{item.imgUrl}}" alt="Card image cap">
+        <div class="card-body ">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p> <b>Price:</b> {{item.price | currency: 'USD'}} </p>
+            <p>{{item.description}}</p>
+            <p>{{item.rating}}</p>
+            <input type="number" >
+        </div> -->
+
+        <div class="py-4">
+            <img class="card-img-top rounded" src="{{item.imgUrl}}" alt="Card image cap">
+        </div>
+        <div class="p-4">
+            <h5 class="card-title">{{item.title}}</h5>
+           
+            <p>{{item.description}}</p>
+            <p>{{item.rating}}</p>
+        </div>
+        <div class="py-4">
+            <p> <b>Price:</b> {{item.price | currency: 'USD'}} </p>
+            <input type="number" value="{{item.quantity}}" min="1" disabled>
+        </div>
+    </div>
+    
+</div>
+
+<div class="text-center">
+    <p>Total Price: {{total}}</p>
+    <button class="btn btn-primary" (click)="checkout()">Check Out</button>
+</div>
+<form action="" class="mt-2 text-center" *ngIf="isEmail">
+    <input type="email" class="me-2" #emailVal  placeholder="example@email.com">
+    <button  class="btn btn-success" type="submit" (click)="submitFinal(emailVal.value)">Submit</button>
+</form>
